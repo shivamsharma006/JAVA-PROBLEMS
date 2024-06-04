@@ -1,16 +1,16 @@
-//PW CLASSES(RECURSION PLAYLIST)
-package javacoding;
-public class sumOfDigits{
-    public static int sumOfDigits(int num){
-        if(num==0){
+import java.util.*;
+public class sumOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENTER A DIGIT:");
+        int num = sc.nextInt();
+        int sum = sumOfDigit(num);
+        System.out.println("SUM is:" + sum);
+    }
+    public static int sumOfDigit(int n){
+        if(n==0){
             return 0;
         }
-        return (num%10)+sumOfDigits(num/10);
-    }
-    public static void main(String[] args) {
-        int num = 12345;
-        int result = sumOfDigits(num);
-        System.out.println(result);
-
+        return (n%10) + sumOfDigit(n/10);
     }
 }
